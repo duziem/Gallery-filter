@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#btns-div{
+    display: flex;
+    justify-content: center;
+}
+
+#data-filters{
+    width: auto;
+    display: flex;
+    padding: 20px;
+}
+
+#data-filters a{
+    margin: 0 14px;
+    padding: 10px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    background-color: slategray;
+    cursor: pointer;
+}
+
+#data-filters a.active{
+    background-color: lightgreen;
+}
+
+#data-items{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+#data-items>div{
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+#data-items .items{
+    width: 20vw;
+    height: 140px;
+    margin: 10px;
+    position: relative;
+    display: block;
+   /* transition: all 1s ease;*/
+}
+
+#data-items img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.hide{
+    animation-name: hideItem;
+    animation-duration: .4s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hideItem{
+    0%{
+        transform-origin: 0% 0%;
+        transform: scaleX(1);
+    }
+    100%{
+        transform-origin: 50% 50%;
+        transform: scaleX(0);
+    }
+}
+@-webkit-keyframes hideItem{
+    0%{
+        transform-origin: 0% 0%;
+        transform: scaleX(1);
+    }
+    100%{
+        transform-origin: 50% 50%;
+        transform: scaleX(0);
+    }
+}
+
+.seek{
+    animation-name: seek;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes seek{
+    0%{
+        transform-origin: 50% 50%;
+        transform: scaleX(0);
+    }
+    100%{
+        transform-origin: 0% 0%;
+        transform: scaleX(1);
+    }
+}
+@-webkit-keyframes seek{
+    0%{
+        transform-origin: 50% 50%;
+        transform: scaleX(0);
+    }
+    100%{
+        transform-origin: 0% 0%;
+        transform: scaleX(1);
+    }
+}
